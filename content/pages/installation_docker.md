@@ -51,7 +51,23 @@ services:
 
 ```
 
+!!! tip defaults : 
+
+
+The default environment variables loaded in the Dockerfile are : 
+
+
+```shell
+ENV JELU_DATABASE_PATH="/database/"
+ENV JELU_FILES_IMAGES="/files/images/"
+ENV JELU_FILES_IMPORTS="/files/imports/"
+```
+
+So it means like we said above that you just need to mount `/database`, `/files` and `/config`
+
+see [Configuration]({{"/configuration/index.html" | url}}) to see what this config means.
+
+
 !!! warning
     ARM versions are built but have not been tested yet !
-
-Give us some feedback if you try it
+    Give us some feedback if you try

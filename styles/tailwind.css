@@ -41,6 +41,10 @@
     }
   }
 
+  .prose thead th {
+    @apply dark:text-gray-500;
+  }
+
   code {
     @apply dark:bg-gray-500;
   }

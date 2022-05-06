@@ -8,7 +8,7 @@ eleventyNavigation:
   title: Welcome.
 ---
 
-![]({{"/content/images/logo-192.png" | url}})
+<!-- ![]({{"/content/images/logo-192.png" | url}}) -->
 
 Welcome to Jelu !
 
@@ -26,5 +26,5 @@ With Jelu you can :
 
 Links : 
 * Come chat on [Discord](https://discord.gg/3RZJ4zuMP5)
-* Like Jelu or find it useful ? Buy me a [coffee ☕](https://ko-fi.com/bayang)
+* Like Jelu or find it useful ? Offer me a [coffee ☕](https://ko-fi.com/bayang)
 

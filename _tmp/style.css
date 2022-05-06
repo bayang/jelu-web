@@ -692,6 +692,11 @@ img:hover {
   text-decoration: none !important
 }
 
+.dark .prose thead th {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
 .dark code {
   --tw-bg-opacity: 1;
   background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
@@ -1477,6 +1482,10 @@ nav ul li a.active {
 
 .mt-1 {
   margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
 }
 
 .mt-4 {

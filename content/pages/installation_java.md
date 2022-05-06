@@ -64,3 +64,21 @@ jelu:
   cors.allowed-origins:
     - https://jelu.myserver.org
 ```
+
+!!! tip defaults : 
+
+
+The default config for java, taken from the `src/main/resources/application.yml` file is : 
+
+
+```yaml
+jelu:
+  database:
+    path: ${user.home}/.jelu/database/
+  files:
+    images: '${user.home}/.jelu/files/images/'
+    imports: '${user.home}/.jelu/files/imports/'
+  session:
+    duration: 604800 #7 days
+```
+
