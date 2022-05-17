@@ -18,7 +18,7 @@ This method is probably the easiest if you are used to it.
 
 The docker image we provide embeds the fetch-ebook-metada executable to automatically import books based on their title, authors or isbn.
 
-The docker image expects config to be mounted in `/config`, the database to be mounted in `/database` and the files dir to be mounted in `/files`.
+The docker image expects config to be mounted in `/config`, the database to be mounted in `/database`, the pictures folder to be mounted in `/files/images` and the imports dir to be mounted in `/files/imports`.
 
 So a sample docker compose would look like that : 
 
@@ -36,8 +36,11 @@ services:
         source: ~/jelu/database
         target: /database
       - type: bind
-        source: ~/jelu/files
-        target: /files
+        source: ~/jelu/files/images
+        target: /files/images
+      - type: bind
+        source: ~/jelu/files/imports
+        target: /files/imports
       - type: bind
         source: /etc/timezone
         target: /etc/timezone
@@ -63,9 +66,17 @@ ENV JELU_FILES_IMAGES="/files/images/"
 ENV JELU_FILES_IMPORTS="/files/imports/"
 ```
 
-So it means like we said above that you just need to mount `/database`, `/files` and `/config`
+So it means like we said above that you just need to mount `/database`, `/files/images`, `/files/imports` and `/config`
 
 see [Configuration]({{"/configuration/index.html" | url}}) to see what this config means.
+
+The `user: "1000:1000"` line in the dockerfile is not mandatory.
+
+Use it to force permissions on folders.
+
+Make sure to replace `1000` by your own id (you can get it by calling the `id` unix command).
+
+See https://docs.docker.com/compose/compose-file/#user
 
 
 !!! warning
