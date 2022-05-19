@@ -29,27 +29,13 @@ services:
     image: wabayang/jelu
     container_name: jelu
     volumes:
-      - type: bind
-        source: ~/jelu/config
-        target: /config
-      - type: bind
-        source: ~/jelu/database
-        target: /database
-      - type: bind
-        source: ~/jelu/files/images
-        target: /files/images
-      - type: bind
-        source: ~/jelu/files/imports
-        target: /files/imports
-      - type: bind
-        source: /etc/timezone
-        target: /etc/timezone
-        read_only: true
+      - ~/perso/jelu-data/compose-test/config:/config
+      - ~/perso/jelu-data/compose-test/database:/database
+      - ~/perso/jelu-data/compose-test/files/images:/files/images
+      - ~/perso/jelu-data/compose-test/files/imports:/files/imports
+      - /etc/timezone:/etc/timezone:ro
     ports:
       - 11111:11111
-    user: "1000:1000"
-    environment:
-      - MYENV=test
     restart: unless-stopped
 
 ```
@@ -69,14 +55,6 @@ ENV JELU_FILES_IMPORTS="/files/imports/"
 So it means like we said above that you just need to mount `/database`, `/files/images`, `/files/imports` and `/config`
 
 see [Configuration]({{"/configuration/index.html" | url}}) to see what this config means.
-
-The `user: "1000:1000"` line in the dockerfile is not mandatory.
-
-Use it to force permissions on folders.
-
-Make sure to replace `1000` by your own id (you can get it by calling the `id` unix command).
-
-See https://docs.docker.com/compose/compose-file/#user
 
 
 !!! warning
