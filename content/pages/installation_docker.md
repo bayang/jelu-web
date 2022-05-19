@@ -29,10 +29,10 @@ services:
     image: wabayang/jelu
     container_name: jelu
     volumes:
-      - ~/perso/jelu-data/compose-test/config:/config
-      - ~/perso/jelu-data/compose-test/database:/database
-      - ~/perso/jelu-data/compose-test/files/images:/files/images
-      - ~/perso/jelu-data/compose-test/files/imports:/files/imports
+      - ~/jelu/config:/config
+      - ~/jelu/database:/database
+      - ~/jelu/files/images:/files/images
+      - ~/jelu/files/imports:/files/imports
       - /etc/timezone:/etc/timezone:ro
     ports:
       - 11111:11111
