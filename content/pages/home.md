@@ -23,6 +23,8 @@ With Jelu you can :
 * import author data (automatically fetch bio and other data from wikipedia)
 * merge authors (because of duplicates, for example an automatic import could have added JRR Tolkien and J.R.R Tolkien)
 * interact with the Jelu API
+* create several users
+* view some stats with your data
 
 Links : 
 * Come chat on [Discord](https://discord.gg/3RZJ4zuMP5)

@@ -56,6 +56,9 @@ So it means like we said above that you just need to mount `/database`, `/files/
 
 see [Configuration]({{"/configuration/index.html" | url}}) to see what this config means.
 
+!!! warning
+    ARM versions must add this environment variable for automatic metadata fetching : 
+    `JELU_METADATA_CALIBRE_PATH=/usr/bin/fetch-ebook-metadata`
 
 !!! warning
     ARM versions are built but have not been tested yet !
