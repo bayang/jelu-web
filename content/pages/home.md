@@ -27,6 +27,8 @@ With Jelu you can :
 * view some stats with your data
 
 Links : 
-* Come chat on [Discord](https://discord.gg/3RZJ4zuMP5)
+* Come chat, ask questions or share your recent reads on [Discord](https://discord.gg/3RZJ4zuMP5)
 * Like Jelu or find it useful ? Offer me a [coffee ☕](https://ko-fi.com/bayang)
+* Help us translate the app in your language on crowdin : https://crowdin.com/project/jelu
+
 
