@@ -18,3 +18,5 @@ eleventyNavigation:
 ![]({{"/content/images/login.jpg" | url}})
 
 * You can edit your informations or create additional users in the settings dashboard (accessible from the top right menu)
+
+If you use ldap support, you are not prompted to create an initial user.
