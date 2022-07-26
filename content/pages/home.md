@@ -28,6 +28,7 @@ With Jelu you can :
 * view some stats with your data
 * export your data in a csv file
 * log in via LDAP
+* write reviews, see reviews from other users on your Jelu instance and share public reviews
 
 Links : 
 * Come chat, ask questions or share your recent reads on [Discord](https://discord.gg/3RZJ4zuMP5)
