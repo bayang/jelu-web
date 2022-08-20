@@ -40,3 +40,46 @@ Here are some configuration keys that may be useful :
 | SERVER_PORT | server.port | The port used by the API and the web frontend, default is `11111` |
 | SPRING_DATASOURCE_USERNAME | spring.datasource.username | The username of the jelu.db database, default is `jelu_user` |
 | SPRING_DATASOURCE_PASSWORD | spring.datasource.password | The password of the jelu.db database, default is `mypass1234` |
+
+### configuring proxy authentication
+
+!!! danger
+    * This is for advanced users, use this only if you know what you are doing
+
+| Env variable      | Property       | Usage        |
+|-------------------|----------------|--------------|
+| JELU_AUTH_LDAP_ENABLED | jelu.auth.ldap.enabled | Activate or not the ldap authent (turn this off if you don't have a ldap server) |
+| JELU_AUTH_PROXY_ENABLED | jelu.auth.proxy.enabled | Activate or not proxy authentication |
+| JELU_AUTH_PROXY_ADMINNAME | jelu.auth.proxy.adminName | Name of the admin user (*see below*) |
+| JELU_AUTH_PROXY_HEADER | jelu.auth.proxy.header | Header which stores the proxu authentication result, defaults to `X-Authenticated-User` if this configuration entry is not set |
+
+In yaml this looks like that : 
+
+```yaml
+jelu:
+  auth:
+    proxy:
+      enabled: true
+      adminName: "adminuser"
+      header: X-Personal-User
+    ldap:
+      enabled: false
+```
+
+#### How does this works :
+
+You typically use this when you want your reverse proxy to handle the authentication part.
+
+When a request hits your reverse proxy, it redirects the user to an authentication mechanism and sets a header containing the user name.
+
+When Jelu receives a request with the header defined in config (or the default one), it first searches in its database to see if a user with this name exists.
+
+If yes, the session is started with this user.
+
+If no, Jelu automatically creates an user with the name.
+
+If the user name is the same as the adminName from the configuration, then the user is created with admin rights.
+
+!!! danger
+    * This allows people to bypass security if anyone finds a way to reach your instance without going through your reverse proxy.
+

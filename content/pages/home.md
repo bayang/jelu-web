@@ -18,7 +18,7 @@ With Jelu you can :
 * track the books you have read and show your history (by year and month)
 * import single books (with automatic online metadata fetching)
 * generate embed codes to display your read books outside of Jelu
-* import you existing history from Goodreads
+* import you existing history from Goodreads or from a list of ISBNs
 * tag books (to manage genres, lists, custom filters etc...)
 * create custom shelves based on tags
 * import author data (automatically fetch bio and other data from wikipedia)
@@ -27,7 +27,7 @@ With Jelu you can :
 * create several users
 * view some stats with your data
 * export your data in a csv file
-* log in via LDAP
+* log in via LDAP or reverse proxy auth
 * write reviews, see reviews from other users on your Jelu instance and share public reviews
 
 Links : 
