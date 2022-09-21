@@ -83,3 +83,25 @@ If the user name is the same as the adminName from the configuration, then the u
 !!! danger
     * This allows people to bypass security if anyone finds a way to reach your instance without going through your reverse proxy.
 
+
+### Adding a fallback metadata provider
+
+It is possible to use Google book API as a fallback metadata provider in case the main metadata provider does not yield any result.
+
+!!! tip
+    * You **must** obtain an API key from Google to use this provider
+    * This provider will only search if an ISBN is provided
+
+
+Once you have an API key you can configure it like this : 
+
+```yaml
+jelu:
+  metadataProviders:  
+    - is-enabled: true  
+      apiKey: "YOUR-API-KEY-HERE"  
+      name: "google"
+```
+
+Then restart Jelu.
+
