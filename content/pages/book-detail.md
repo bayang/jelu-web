@@ -22,3 +22,5 @@ eleventyNavigation:
 !!! danger
     it means that in the first case you delete only your user data about this book but the book stays in the database, for other users for example. In the  second case you wipe this book's data from the database potentially erasing a book from other users history
 * The edit button allows you to edit this book's data (the technical data, that will be propagated to all users and also your specific data, that only you can see like ; owned, to read, personal notes etc...)
+* the star button allows you to create a review, see [Reviews]({{"/usage/reviews/index.html" | url}})
+* The magnifying glass button allows you to fetch (or re-fetch) metadata for the current book
