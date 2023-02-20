@@ -77,12 +77,12 @@
   .callout-green, .callout-green strong, .callout-green em {
     @apply dark:text-gray-200 dark:bg-green-900;
   }
-  .warning {
+  /* .warning {
     @apply px-8 py-4 mb-4 rounded-lg bg-red-800 text-gray-50;
   }
   .warning, .warning strong, .warning em {
     @apply text-gray-50 dark:bg-red-900  dark:text-gray-200;
-  }
+  } */
 
   /* Overrides for nav/Table of Contents block */
   nav ul {

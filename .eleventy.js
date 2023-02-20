@@ -227,7 +227,7 @@ module.exports = function(eleventyConfig) {
   .use(markdownItContainer, 'callout-blue')
   .use(markdownItContainer, 'callout-pink')
   .use(markdownItContainer, 'callout-green')
-  .use(markdownItContainer, 'warning')
+  // .use(markdownItContainer, 'warning')
   .use(markdownItTasks)
   .use(markdownItCenterText)
   .use(markdownLinkifyImages, {

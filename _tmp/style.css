@@ -743,33 +743,12 @@ blockquote {
   padding: 1rem;
 }
 
-.warning {
-  margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  --tw-text-opacity: 1;
-  color: rgba(249, 250, 251, var(--tw-text-opacity));
-}
-
-.dark .warning, .dark .warning strong, .dark .warning em {
-  --tw-bg-opacity: 1;
-  background-color: rgba(127, 29, 29, var(--tw-bg-opacity));
-}
-
-.warning, .warning strong, .warning em {
-  --tw-text-opacity: 1;
-  color: rgba(249, 250, 251, var(--tw-text-opacity));
-}
-
-.dark .warning, .dark .warning strong, .dark .warning em {
-  --tw-text-opacity: 1;
-  color: rgba(229, 231, 235, var(--tw-text-opacity));
-}
+/* .warning {
+    @apply px-8 py-4 mb-4 rounded-lg bg-red-800 text-gray-50;
+  }
+  .warning, .warning strong, .warning em {
+    @apply text-gray-50 dark:bg-red-900  dark:text-gray-200;
+  } */
 
 /* Overrides for nav/Table of Contents block */
 
