@@ -84,12 +84,15 @@ If the user name is the same as the adminName from the configuration, then the u
     * This allows people to bypass security if anyone finds a way to reach your instance without going through your reverse proxy.
 
 
-### Adding a fallback metadata provider
+### Adding other metadata providers
 
-It is possible to use Google book API as a fallback metadata provider in case the main metadata provider does not yield any result.
+See the [Metadata]({{"/usage/metadata/index.html" | url}}) page.
+
+For example, it is possible to use Google book API as a metadata provider.
+
 
 !!! tip
-    * You **must** obtain an API key from Google to use this provider
+    * You **must** obtain an API key from Google to use the Google API provider
     * This provider will only search if an ISBN is provided
 
 
@@ -104,4 +107,33 @@ jelu:
 ```
 
 Then restart Jelu.
+
+
+There is also a debug plugin (which does nothing except printing the parameters in the logs)
+
+The yaml for plugins configuration is shown below : 
+
+
+```yaml
+jelu:
+  metadataProviders:
+    - is-enabled: true
+      apiKey: ""
+      order: -100000
+      name: "jelu-debug"
+    - is-enabled: true
+      apiKey: "YOUR_API_KEY_HERE"
+      order: -10
+      name: "google"
+  metadata:
+    calibre:
+      path: /usr/bin/fetch-ebook-metadata
+      order: 50000
+```
+
+The google plugin and the jelu-debug plugin names must be the same as in the config above.
+
+If not set the default order priority of the calibre plugin is 1000.
+
+For the other plugins the default order is -1000.
 
