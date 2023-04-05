@@ -51,7 +51,7 @@ Here are some configuration keys that may be useful :
 | JELU_AUTH_LDAP_ENABLED | jelu.auth.ldap.enabled | Activate or not the ldap authent (turn this off if you don't have a ldap server) |
 | JELU_AUTH_PROXY_ENABLED | jelu.auth.proxy.enabled | Activate or not proxy authentication |
 | JELU_AUTH_PROXY_ADMINNAME | jelu.auth.proxy.adminName | Name of the admin user (*see below*) |
-| JELU_AUTH_PROXY_HEADER | jelu.auth.proxy.header | Header which stores the proxy authentication result, defaults to `X-Authenticated-User` if this configuration entry is not set |
+| JELU_AUTH_PROXY_HEADER | jelu.auth.proxy.header | Header which stores the proxy authentication username, defaults to `X-Authenticated-User` if this configuration entry is not set |
 
 In yaml this looks like that : 
 
