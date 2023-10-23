@@ -15,6 +15,10 @@ eleventyNavigation:
 * Choose the import type (goodreads or ISBN list)
 * Click the browse button to find the actual file you want to import
 * Click the Import button
+
+!!! tip
+    * Make sure your Goodreads export file has ISBNs in it, the Jelu import will ignore lines without ISBNs
+
 !!! tip
     * Once you clicked import you don't have to stay on the page. The task is now happening in the background
     * You will be notified of the events regarding your import in the messages section.
