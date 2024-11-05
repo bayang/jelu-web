@@ -37,6 +37,7 @@ The following fields are available for search using the `field:search` syntax :
 - `goodreadsId` will search goodreads id. Example: `goodreadsId:1234`
 - `amazonId` will search amazon id. Example: `amazonId:1234`
 - `librarythingId` will search librarything id. Example: `librarythingId:1234`
+- `isfdbId`, `openlibraryId`, `noosfereId` and `inventaireId` are also available and are used in the same way as `amazonId` for example
 
 
 <sub><sup>(The idea and part of the code comes from Komga implementation, go check it out : https://github.com/gotson/komga)</sub></sup>

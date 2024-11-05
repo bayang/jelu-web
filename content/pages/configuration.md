@@ -125,15 +125,32 @@ jelu:
       apiKey: "YOUR_API_KEY_HERE"
       order: -10
       name: "google"
+    - name: "inventaireio"
+      is-enabled: true
+      order: 200000
+      config: "fr"
   metadata:
     calibre:
       path: /usr/bin/fetch-ebook-metadata
       order: 50000
 ```
 
-The google plugin and the jelu-debug plugin names must be the same as in the config above.
+!!! tip
+    The google plugin, the inventaire.io plugin and the jelu-debug plugin names must be the same as in the config above.
 
 If not set the default order priority of the calibre plugin is 1000.
 
 For the other plugins the default order is -1000.
+
+The inventaire.io plugin accepts a `config` key.
+
+This key is used to select your preferred language. When several languages are available in the inventaire.io API (for book titles, tags etc...) Jelu will first try to get your preferred language, if it does not exist it will try to get the english version as a fallback.
+
+The accepted values are 2 or 3 letters ISO language codes.
+
+Here is a sample of availables values from the inventaire.io API : 
+
+```
+"pt","fr","en","es","ca","it","et","de","nn","ja","cs","fa","bg","mzn","nl","da","sv","zh","ckb","nb","sl","fi","hu","pl","azb","eu","br","gl","uk","ast","ru","ar","pt-br","cy","sq","arz","pap","ka","tr"
+```
 
