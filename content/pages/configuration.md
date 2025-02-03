@@ -88,8 +88,8 @@ If the user name is the same as the adminName from the configuration, then the u
 
 | Env variable      | Property       | Usage        |
 |-------------------|----------------|--------------|
-| JELU_AUTH_OAUTH2_ACCOUNT_CREATION | jelu.auth.oauth2AccountCreation | boolean indicating whether Jelu should create new users when a login via OAuth2/OIDC succeeds, but there is no existing user with that email. Such users will be created with a random password, which the user can subsequently change from the _Account Settings_ page later on. default is `false` |
-| JELU_AUTH_OIDC_EMAIL_VERIFICATION | jelu.auth.oidcEmailVerification | boolean indicating whether Jelu should check whether the `email_verified` claim is present and true in the OpenID Connect request. Default is `true` |
+| JELU_AUTH_OAUTH2ACCOUNTCREATION | jelu.auth.oauth2AccountCreation | boolean indicating whether Jelu should create new users when a login via OAuth2/OIDC succeeds, but there is no existing user with that email. Such users will be created with a random password, which the user can subsequently change from the _Account Settings_ page later on. default is `false` |
+| JELU_AUTH_OIDCEMAILVERIFICATION | jelu.auth.oidcEmailVerification | boolean indicating whether Jelu should check whether the `email_verified` claim is present and true in the OpenID Connect request. Default is `true` |
 
 !!! danger
     * only disable oidcEmailVerification with OIDC providers that do not verify emails (like Azure AD)
