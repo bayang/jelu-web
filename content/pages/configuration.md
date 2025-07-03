@@ -1,9 +1,9 @@
 ---
 title: Configuration.
-date: Last Modified 
+date: Last Modified
 permalink: /configuration/index.html
 eleventyNavigation:
-  key: configuration 
+  key: configuration
   order: 200
   title: Configuration.
 ---
@@ -33,7 +33,7 @@ If you are running the docker version either provide environment variables or pu
 
 Jelu is developed using the Spring framework and [Spring boot](https://docs.spring.io/spring-boot/docs/current/reference/html/index.html), so all config from spring and spring boot is available.
 
-Here are some configuration keys that may be useful : 
+Here are some configuration keys that may be useful :
 
 | Env variable      | Property       | Usage        |
 |-------------------|----------------|--------------|
@@ -53,7 +53,7 @@ Here are some configuration keys that may be useful :
 | JELU_AUTH_PROXY_ADMINNAME | jelu.auth.proxy.adminName | Name of the admin user (*see below*) |
 | JELU_AUTH_PROXY_HEADER | jelu.auth.proxy.header | Header which stores the proxy authentication username, defaults to `X-Authenticated-User` if this configuration entry is not set |
 
-In yaml this looks like that : 
+In yaml this looks like that :
 
 ```yaml
 jelu:
@@ -108,13 +108,13 @@ For example, it is possible to use Google book API as a metadata provider.
     * This provider will only search if an ISBN is provided
 
 
-Once you have an API key you can configure it like this : 
+Once you have an API key you can configure it like this :
 
 ```yaml
 jelu:
-  metadataProviders:  
-    - is-enabled: true  
-      apiKey: "YOUR-API-KEY-HERE"  
+  metadataProviders:
+    - is-enabled: true
+      apiKey: "YOUR-API-KEY-HERE"
       name: "google"
 ```
 
@@ -123,7 +123,7 @@ Then restart Jelu.
 
 There is also a debug plugin (which does nothing except printing the parameters in the logs)
 
-The yaml for plugins configuration is shown below : 
+The yaml for plugins configuration is shown below :
 
 
 ```yaml
@@ -141,6 +141,9 @@ jelu:
       is-enabled: true
       order: 200000
       config: "fr"
+    - name: "databazeknih"
+      is-enabled: true
+      order: 200001
   metadata:
     calibre:
       path: /usr/bin/fetch-ebook-metadata
@@ -160,9 +163,8 @@ This key is used to select your preferred language. When several languages are a
 
 The accepted values are 2 or 3 letters ISO language codes.
 
-Here is a sample of availables values from the inventaire.io API : 
+Here is a sample of availables values from the inventaire.io API :
 
 ```
 "pt","fr","en","es","ca","it","et","de","nn","ja","cs","fa","bg","mzn","nl","da","sv","zh","ckb","nb","sl","fi","hu","pl","azb","eu","br","gl","uk","ast","ru","ar","pt-br","cy","sq","arz","pap","ka","tr"
 ```
-
