@@ -151,7 +151,7 @@ jelu:
 ```
 
 !!! tip
-    The google plugin, the inventaire.io plugin and the jelu-debug plugin names must be the same as in the config above.
+    The google plugin, the inventaire.io plugin, the databazeknih plugin and the jelu-debug plugin names must be the same as in the config above.
 
 If not set the default order priority of the calibre plugin is 1000.
 

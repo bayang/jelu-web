@@ -32,8 +32,5 @@ eleventyNavigation:
 !!! tip
     * this is only possible if you have more than 1 metadata plugin configured
 
-!!! danger
-    * At the moment the google plugin only works if an isbn is provided
-
 
 See the [Configuration]({{"/configuration/index.html" | url}}) page to know how to configure plugins.
