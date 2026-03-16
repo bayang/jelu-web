@@ -11,4 +11,4 @@ eleventyNavigation:
 
 * Jelu provides a REST API accessible from `swagger-ui.html`
 * Authorization is done through Basic auth
-
+* You can also authenticate using [API Tokens]({{"/usage/api-tokens/index.html" | url}}) for programmatic access
